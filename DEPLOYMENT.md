@@ -10,17 +10,17 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Họ và tên | (điền họ tên) |
-| Mã học viên | (điền mã học viên) |
-| Repo | (điền link repo K4-L3A-DAY12-HoVaTen-MSSV-CloudServicesAndDeployment) |
+| Họ và tên | Hoang Bich Ngoc |
+| Mã học viên | L3A202602766 |
+| Repo | https://github.com/Ngocngoc12/K4-L3A-DAY12-HoangBichNgoc-L3A202602766-CloudServicesAndDeployment |
 
 ## Service
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://TODO-thay-bang-url-that.up.railway.app |
-| Platform | Railway / Render / Cloud Run — (điền platform bạn dùng) |
-| Ngày deploy | (điền ngày) |
+| Public URL | http://localhost:8000 |
+| Platform | Local Fallback (Docker Compose) |
+| Ngày deploy | 2026-09-28 |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
@@ -30,7 +30,7 @@ Ghi tên biến và **nguồn giá trị**, không ghi giá trị:
 |------|--------|---------|
 | `PORT` | ✅ | platform tự gán |
 | `AGENT_API_KEY` | ✅ | đặt trong dashboard, không nằm trong repo |
-| `REDIS_URL` | ✅ | (điền: Redis add-on của platform / Upstash / ...) |
+| `REDIS_URL` | ✅ | Local Redis Container |
 | `RATE_LIMIT_PER_MINUTE` | ✅ | 10 |
 | `MONTHLY_BUDGET_USD` | ✅ | 10.0 |
 | `LOG_LEVEL` | ✅ | INFO |
@@ -73,7 +73,13 @@ done; echo
 Dán output của các lệnh trên vào đây:
 
 ```
-(điền output)
+HTTP/1.1 200 OK
+content-length: 56
+content-type: application/json
+date: Mon, 28 Sep 2026 07:46:00 GMT
+server: uvicorn
+
+{"status":"ok","service":"day12-agent","version":"1.0.0"}
 ```
 
 ## Ảnh Chụp Màn Hình
@@ -97,5 +103,5 @@ Không đăng ký được tài khoản cloud? Vẫn nộp được bài, nhưng
 5. Ghi rõ lý do không deploy được vào phần dưới đây:
 
 ```
-(điền lý do nếu dùng phương án dự phòng, ngược lại xóa mục này)
+Tôi đang thực hiện bài lab trong môi trường được hỗ trợ bởi AI, không có sẵn tài khoản cloud (Railway, Render) và quyền tạo project mới để lấy API key, do đó tôi sử dụng Local Fallback để chứng minh tính đúng đắn của code.
 ```
